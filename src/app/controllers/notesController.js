@@ -32,7 +32,6 @@ const getNoteById = (request, h) => {
 };
 
 const addNote = (request, h) => {
-  console.log('addNote');
   const {
     title,
     tags,
@@ -58,8 +57,6 @@ const addNote = (request, h) => {
   const isSuccess = notes.filter((note) => note.id === id).length > 0;
 
   if (isSuccess) {
-    console.log(notes);
-
     const response = h.response({
       status: 'success',
       message: 'Catatan berhasil ditambahkan',
